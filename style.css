@@ -116,6 +116,8 @@ main {
   color: #FF9A6C;
 }
 
+/* botão */
+
 input[type="submit"] {
   background-color: #333; 
   color: white; 
@@ -135,6 +137,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #FF9A6C; 
 }
+
+/* tipos */
 
 .tipos {
   padding: 20px;
@@ -166,6 +170,8 @@ input[type="submit"]:hover {
   border-radius: 5px;
   box-sizing: border-box;
 }
+
+/* botão estilos */
 
 .tipos input[type="submit"] {
   background-color: #333; 

@@ -116,3 +116,72 @@ main {
   color: #FF9A6C;
 }
 
+input[type="submit"] {
+  background-color: #333; 
+  color: white; 
+  padding: 20px 40px; 
+  border: none; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  display: block; 
+  width: calc(100% - 40px);
+  max-width: 100vw; 
+  margin: 20px 20px 0 20px; 
+  box-sizing: border-box; 
+  text-align: center; 
+}
+
+
+input[type="submit"]:hover {
+  background-color: #FF9A6C; 
+}
+
+.tipos {
+  padding: 20px;
+}
+
+.tipos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tipos ul li {
+  margin-bottom: 10px;
+}
+
+.tipos ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 8px 0;
+}
+
+.tipos input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.tipos input[type="submit"] {
+  background-color: #333; 
+  color: white; 
+  padding: 20px 40px; 
+  border: none; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  width: 100%; 
+  margin: 20px 0; 
+  box-sizing: border-box; 
+  text-align: center; 
+}
+
+.tipos input[type="submit"]:hover {
+  background-color: #FF9A6C; 
+}
+
+

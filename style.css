@@ -68,7 +68,7 @@ main {
 }
 
 /* Estilos para os blocos de conteúdo */
-.conteudos {
+.conteudos, .tipos {
   background-color: #f4f4f4;
   margin-bottom: 20px;
   padding: 20px;
@@ -78,7 +78,7 @@ main {
   padding-left: 20px;
 }
 
-.conteudos p {
+.conteudos  p {
   padding: 0 20px;
 }
 

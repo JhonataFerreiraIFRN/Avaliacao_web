@@ -102,3 +102,17 @@ main {
 .pokemon-list ul li a:hover {
   background-color: #ccc;
 }
+
+/* rodapé */
+
+#footer {
+  background-color: #333;
+  color: #FFFFFF;
+  padding: 24px;
+  text-align: center;
+}
+
+#footer a {
+  color: #FF9A6C;
+}
+

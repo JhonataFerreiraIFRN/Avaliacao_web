@@ -16,18 +16,19 @@ header {
   color: aliceblue;
 }
 
-.div-img{
+.div-img {
   margin-right: auto; 
   height: 70px;
   width: 70px;
   padding-left: 10px;
 }
-img{
+
+img {
   max-width: 70px;
   height: 70px;
 }
 
-h1{
+h1 {
   text-align: center; 
   margin: 0; 
   flex: 1; 
@@ -78,7 +79,7 @@ main {
   padding-left: 20px;
 }
 
-.conteudos  p {
+.conteudos p {
   padding: 0 20px;
 }
 
@@ -105,37 +106,16 @@ main {
 
 /* rodapé */
 
-#footer {
+footer {
   background-color: #333;
   color: #FFFFFF;
   padding: 24px;
   text-align: center;
+ 
 }
 
-#footer a {
-  color: #FF9A6C;
-}
-
-/* botão */
-
-input[type="submit"] {
-  background-color: #333; 
-  color: white; 
-  padding: 20px 40px; 
-  border: none; 
-  border-radius: 10px; 
-  cursor: pointer; 
-  display: block; 
-  width: calc(100% - 40px);
-  max-width: 100vw; 
-  margin: 20px 20px 0 20px; 
-  box-sizing: border-box; 
-  text-align: center; 
-}
-
-
-input[type="submit"]:hover {
-  background-color: #FF9A6C; 
+footer a {
+  color: red;
 }
 
 /* tipos */
@@ -184,10 +164,10 @@ input[type="submit"]:hover {
   margin: 20px 0; 
   box-sizing: border-box; 
   text-align: center; 
+  font-size: large;
 }
 
 .tipos input[type="submit"]:hover {
-  background-color: #FF9A6C; 
+  background-color: #111;
+  color: red;
 }
-
-

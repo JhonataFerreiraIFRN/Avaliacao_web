@@ -13,70 +13,100 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/scroll.css">
     <link rel="icon" href="/assets/icon.png">
-    <title>Avaliaçãa Padrões Web</title>
+    <title>Avaliação Padrões Web</title>
 
+    <script>
+        function validarEnvio(event) {
+            event.preventDefault();
+
+            var inputs = document.querySelectorAll('input[type="text"]');
+            var todosPreenchidos = true;
+
+            inputs.forEach(function (input) {
+                if (input.value.trim() === '') {
+                    todosPreenchidos = false;
+                }
+            });
+
+
+            if (todosPreenchidos) {
+                event.target.submit();
+            } else {
+                alert('Por favor, preencha todos os campos antes de enviar.');
+            }
+        }
+
+        function showAlert() {
+            alert("Pikachu eu escolho você!");
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var pokebolaImg = document.getElementById('pokebolaImg');
+            pokebolaImg.addEventListener('click', showAlert);
+        });
+    </script>
 </head>
 
 <body>
     <header>
-        <div class="div-img"> <img src="assets/pokebola.png" alt="" srcset=""></div>
+        <div class="div-img">
+            <img id="pokebolaImg" src="assets/pokebola.png" alt="" srcset="">
+        </div>
         <h1>Boas vindas!</h1>
-
     </header>
     <nav>
         <ul>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Pokemons</a></li>
-            <li><a href="">Tipos</a></li>
-            <li><a href="">Estágios</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#pokemons">Pokemons</a></li>
+            <li><a href="#buscarpokemon">Buscar Pokemon</a></li>
+            <li><a href="#devteam">DevTeam</a></li>
         </ul>
     </nav>
     <main>
-        <div class="conteudos">
+        <div id="sobre" class="conteudos">
             <h2>Sobre</h2>
             <p>A página dedicada a Pokémon é um espaço online projetado para oferecer uma experiência imersiva e
                 informativa sobre o universo dos Pokémon. Nela, os visitantes podem explorar uma variedade de recursos
                 relacionados aos Pokémon, incluindo informações detalhadas sobre diferentes espécies de Pokémon, suas
                 características, habilidades e evoluções.</p>
         </div>
-        <div class="conteudos">
-            <h2>Pokémons</h2>
+        <div id="pokemons" class="conteudos">
+            <h2>Pokemons</h2>
             <p>Os Pokémon são criaturas fictícias que habitam um mundo fictício conhecido como "Pokémon". Cada Pokémon
                 possui características únicas, habilidades especiais e pode pertencer a diferentes tipos, como fogo,
                 água, elétrico, entre outros. Eles são capturados e treinados por treinadores para batalhar uns contra
                 os outros em competições, ou para auxiliar em missões diversas.</p>
             <div class="pokemon-list">
                 <ul>
-                    <li><a href="">Caracteristicas</a></li>
-                    <li><a href="">Força</a></li>
-                    <li><a href="">Alimentos</a></li>
+                    <li><a href="#">Caracteristicas</a></li>
+                    <li><a href="#">Força</a></li>
+                    <li><a href="#">Alimentos</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="tipos">
-            <h2>informações</h2>
-            <p>Tipos de Pokémon é essencial para se tornar um treinador de sucesso. Cada tipo possui suas próprias vantagens, fraquezas e resistências, que podem fazer toda a diferença nas batalhas.</p>
-            <ul>
-              <li><a href="#" onclick="event.preventDefault();">Número da pokedex</a></li>
-              <input type="text" placeholder="Digite o número da pokedex">
-              <li><a href="#" onclick="event.preventDefault();">Descrição</a></li>
-              <input type="text" placeholder="Digite a descrição">
-              <li><a href="#" onclick="event.preventDefault();">Estágios</a></li>
-              <input type="text" placeholder="Quantidade de evoluções">
-              <input type="submit" value="Enviar">
-            </ul>
-          </div>
-        
+        <div id="buscarpokemon" class="tipos">
+            <h2>Buscar Pokemon</h2>
+            <p>Tipos de Pokémon é essencial para se tornar um treinador de sucesso. Cada tipo possui suas próprias
+                vantagens, fraquezas e resistências, que podem fazer toda a diferença nas batalhas.</p>
+            <form id="meuFormulario" onsubmit="validarEnvio(event)">
+                <ul>
+                    <li><a href="#" onclick="event.preventDefault();">Número da pokedex</a></li>
+                    <input type="text" name="pokedexNumero" placeholder="Digite o número da pokedex" required>
+                    <li><a href="#" onclick="event.preventDefault();">Descrição</a></li>
+                    <input type="text" name="descricao" placeholder="Digite a descrição" required>
+                    <li><a href="#" onclick="event.preventDefault();">Estágios</a></li>
+                    <input type="text" name="quantidadeEvolucoes" placeholder="Quantidade de evoluções" required>
+                    <input type="submit" value="Buscar Pokemon">
+                </ul>
+            </form>
         </div>
-         <div id="footer">
-        
-        Desenvolvido por <a href="https://github.com/MauricioSts" target="_blank">@Mauricio</a>
-        e <a href="https://github.com/JhonataOvirowa" target="_blank">@Jhonata</a>.
-
-         </div>
-
     </main>
+    <footer id="devteam">
+        &copy; 2024 Desenvolvido por <a href="https://github.com/MauricioSts" target="_blank">@Mauricio</a>
+        e <a href="https://github.com/JhonataOvirowa" target="_blank">@Jhonata</a>.
+    </footer>
 </body>
 
 </html>
